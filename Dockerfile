@@ -1,4 +1,3 @@
-FROM 
-copy . .
-EXPOSE 8081:8081
-CMD ["", ""]
+FROM tomcat:8-jre8
+
+COPY ./webapp/target/webapp.war /usr/local/tomcat/webapps
